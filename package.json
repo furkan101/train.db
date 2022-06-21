@@ -1,0 +1,15 @@
+{
+  "name": "train.db",
+  "version": "1.0.0",
+  "description": "train.db is an open-source relational database management system which uses SQL for queries, completely written in TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./dist/main.js"
+  },
+  "keywords": [],
+  "author": "Furkan Enes Dede",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
