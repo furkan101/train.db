@@ -4,5 +4,8 @@ train.db is an open-source relational database management system which uses SQL 
 # Developers
 Furkan Enes Dede
 
+# Query examples
+Getting data: `GET FROM -tableName- WHERE -rowName- = -data-`
+
 # To-do list
 - [ ] Complete query check

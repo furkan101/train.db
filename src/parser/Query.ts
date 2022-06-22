@@ -16,17 +16,20 @@ export class Query {
     }
 
     private getType = () => {
-        if(this.query.startsWith('SELECT')) {
+        if(this.query.startsWith('get from').toString().toLocaleLowerCase()) {
             this.queryType = QueryType.TYPE_SELECT;
         }
-        else if(this.query.startsWith('INSERT')) {
-            this.queryType = this.queryType = QueryType.TYPE_INSERT;
+        else if(this.query.startsWith('create into').toString().toLocaleLowerCase()) {
+            this.queryType = QueryType.TYPE_INSERT;
         }
-        else if(this.query.startsWith('DELETE')) {
-            this.queryType = this.queryType = QueryType.TYPE_DELETE;
+        else if(this.query.startsWith('delete from').toString().toLocaleLowerCase()) {
+            this.queryType = QueryType.TYPE_DELETE;
         }
-        else if(this.query.startsWith('UPDATE')) {
-            this.queryType = this.queryType = QueryType.TYPE_UPDATE;
+        else if(this.query.startsWith('update').toString().toLocaleLowerCase()) {
+            this.queryType = QueryType.TYPE_UPDATE;
+        }
+        else {
+            this.queryType = QueryType.TYPE_ERROR;
         }
     }
 }
